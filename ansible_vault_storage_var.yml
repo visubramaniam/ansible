@@ -1,0 +1,8 @@
+[root@rhel9-jump ansible_vault_vars]# cat ansible_vault_storage_var.yml
+# User will use Ansible Vault to encrypt this file.
+# Ansible will decrypt this file when it executes the playbook.
+
+storage_serial: 613496    # Example: 810018
+storage_address: 192.168.182.55     # Example: storage1.company.com or sds1.company.com or 10.10.10.10
+vault_storage_username: "ansible_uai"
+vault_storage_secret: "St0r@g3@DP!" 
