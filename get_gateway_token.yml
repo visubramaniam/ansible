@@ -24,3 +24,5 @@
       ignore_errors: False
     - debug:
         var: result_token
+    - name: Set gateway token
+        gateway_token = "{{ result_token.api_token.token }}"
