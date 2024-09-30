@@ -22,3 +22,5 @@
           password: "{{ vault_gateway_secret }}"
       register: result_token
       ignore_errors: False
+    - debug:
+        var: result_token
