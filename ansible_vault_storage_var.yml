@@ -1,4 +1,3 @@
-[root@rhel9-jump ansible_vault_vars]# cat ansible_vault_storage_var.yml
 # User will use Ansible Vault to encrypt this file.
 # Ansible will decrypt this file when it executes the playbook.
 
