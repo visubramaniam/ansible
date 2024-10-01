@@ -27,4 +27,8 @@
       set_fact:
         gateway_token: "{{ result_token.api_token.token }}"
     - name: Create Ldev
-        hv_ldev:
+      hv_ldev:
+        connection_info:
+          address: "{{ uai_gateway_address }}"
+          username: "{{ vault_gateway_username }}"
+          password: "{{ vault_gateway_secret }}"
