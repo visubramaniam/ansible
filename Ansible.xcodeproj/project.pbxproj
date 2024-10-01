@@ -12,6 +12,7 @@
 		BFFA032A2CAB259F000CFA6B /* create_ldev.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = create_ldev.yml; sourceTree = "<group>"; };
 		BFFA032B2CAB2636000CFA6B /* get_gateway_token.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = get_gateway_token.yml; sourceTree = "<group>"; };
 		BFFA032C2CAB3433000CFA6B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		BFFA032D2CAB7700000CFA6B /* vsp_uai_gateway_variables.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = vsp_uai_gateway_variables.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -21,6 +22,7 @@
 				BFFA03282CAB22FE000CFA6B /* ansible_vault_gateway_var.yml */,
 				BFFA03292CAB2524000CFA6B /* ansible_vault_storage_var.yml */,
 				BFFA032A2CAB259F000CFA6B /* create_ldev.yml */,
+				BFFA032D2CAB7700000CFA6B /* vsp_uai_gateway_variables.yml */,
 				BFFA032B2CAB2636000CFA6B /* get_gateway_token.yml */,
 				BFFA032C2CAB3433000CFA6B /* .gitignore */,
 			);
