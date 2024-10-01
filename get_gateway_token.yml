@@ -26,4 +26,4 @@
         var: result_token
     - name: Set gateway token
       set_fact:
-        gateway_token = "{{ result_token.api_token.token }}"
+        gateway_token: "{{ result_token.api_token.token }}"
