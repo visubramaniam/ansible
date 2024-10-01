@@ -13,21 +13,16 @@
     - vsp_uai_gateway_variables.yml
 
   tasks:
-####################################################################
-# Task 0 : Create ldev
-####################################################################
     - name: Create ldev
       hv_ldev:
         connection_info:
           connection_type: "{{ connection_type }}"
           address: "{{ uai_gateway_address }}"
           api_token: "{{ gateway_token }}"
-#          subscriber_id: "{{ subscriber_id }}"
         storage_system_info:
           serial: "{{ storage_serial }}"
         state: "{{ state_present }}"
         spec:
-#          ldev_id: "{{ ldev_ldev_id_1 }}"
           pool_id: "{{ ldev_pool_id_1 }}"
           size: "{{ ldev_size_1 }}"
           name: "{{ ldev_name_1 }}"
