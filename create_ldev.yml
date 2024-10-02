@@ -71,7 +71,7 @@
           address: "{{ uai_gateway_address }}"
           api_token: "{{ gateway_token }}"
         storage_system_info:
-          serial: "{{ storage_serial }}"
+          serial: "{{ storage_serial_2 }}"
         state: "{{ state_present }}"
         spec:
           name: "{{ hostgroup_name_2 }}"

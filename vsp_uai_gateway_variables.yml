@@ -27,7 +27,7 @@ hostgroup_wwns_1 :
   - 1876543210ABCDE0
   - 1876543210ABCDE1
 #####################################################################
-# Task 2 : Create hostgroup
+# Task 2 : Create remote hostgroup
 ######################################################################
 hostgroup_name_2 : ntrs_demo_dc2_1002
 hostgroup_port_2 : CL7-A
