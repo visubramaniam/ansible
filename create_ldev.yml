@@ -90,7 +90,6 @@
           connection_type: "{{ connection_type }}"
           address: "{{ uai_gateway_address }}"
           api_token: "{{ result_token.api_token.token }}"
-          subscriber_id: "{{ subscriber_id }}"
         spec:
           primary_volume_id: "{{ created_ldev_id }}"
           primary_volume_journal_id: "{{ hur_primary_volume_journal_id_1 }}"
