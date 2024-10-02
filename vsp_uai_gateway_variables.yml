@@ -1,10 +1,28 @@
 ####################################################################
 # Variables for ldev playbook
 ####################################################################
+# Common
+####################################################################
+state_present : present
+state_absent : absent
+state_resync : resync
+state_sync : sync
+state_split : split
+state_restore : restore
+####################################################################
 # Task 1 : Create ldev
 ####################################################################
 ldev_ldev_id_1 : 4102
 ldev_pool_id_1 : 0
 ldev_size_1 : 10GB
 ldev_name_1 : ntrs_demo_dc1
-
+#####################################################################
+# Task 2 : Create hostgroup
+######################################################################
+hostgroup_name_1 : ntrs_demo_dc1_1002
+hostgroup_port_1 : CL1-C
+hostgroup_host_mode_1 : VMWARE_EXTENSION
+hostgroup_host_mode_options_1 : [ 54, 63 ]
+hostgroup_wwns_1 :
+  - 1876543210ABCDE0
+  - 1876543210ABCDE1

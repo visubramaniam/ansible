@@ -34,6 +34,7 @@
           api_token: "{{ gateway_token }}"
         storage_system_info:
           serial: "{{ storage_serial }}"
+        state: "{{ state_present }}"
         spec:
           pool_id: "{{ ldev_pool_id_1 }}"
           size: "{{ ldev_size_1 }}"
@@ -44,3 +45,24 @@
     - name: Set LDEV ID
       set_fact:
         created_ldev_id: "{{ result.data.ldev_id }}"
+    - name: Create hostgroup
+      hv_hg:
+        connection_info:
+          connection_type: "{{ connection_type }}"
+          address: "{{ uai_gateway_address }}"
+          api_token: "{{ result_token.api_token.token }}"
+          subscriber_id: "{{ subscriber_id }}"
+        storage_system_info:
+          serial: "{{ storage_serial }}"
+        state: "{{ state_present }}"
+        spec:
+          name: "{{ hostgroup_name_1 }}"
+          port: "{{ hostgroup_port_1 }}"
+          host_mode: "{{ hostgroup_host_mode_1 }}"
+          host_mode_options: "{{ hostgroup_host_mode_options_1 }}"
+          ldevs:  [ "{{ created_ldev_id }}" ]
+          wwns: "{{ hostgroup_wwns_1 }}"
+      register: result
+
+    - debug:
+        var: result
