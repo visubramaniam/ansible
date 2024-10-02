@@ -29,10 +29,10 @@ hostgroup_wwns_1 :
 #####################################################################
 # Task 2 : Create hostgroup
 ######################################################################
-hostgroup_name_1 : ntrs_demo_dc2_1002
-hostgroup_port_1 : CL7-A
-hostgroup_host_mode_1 : VMWARE_EXTENSION
-hostgroup_host_mode_options_1 : [ 54, 63 ]
-hostgroup_wwns_1 :
+hostgroup_name_2 : ntrs_demo_dc2_1002
+hostgroup_port_2 : CL7-A
+hostgroup_host_mode_2 : VMWARE_EXTENSION
+hostgroup_host_mode_options_2 : [ 54, 63 ]
+hostgroup_wwns_2 :
   - 2876543210ABCDE0
   - 2876543210ABCDE1
