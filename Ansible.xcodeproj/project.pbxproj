@@ -39,7 +39,8 @@
 			buildConfigurationList = BFFA03252CAB22AD000CFA6B /* Build configuration list for PBXLegacyTarget "Ansible" */;
 			buildPhases = (
 			);
-			buildToolPath = /opt/homebrew/bin/python3;
+			buildToolPath = "/opt/homebrew/bin/ansible-playbook";
+			buildWorkingDirectory = /Users/vinodsubramaniam/ansible/Ansible;
 			dependencies = (
 			);
 			name = Ansible;

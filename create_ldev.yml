@@ -1,5 +1,5 @@
 ####################################################################
-# Create LDEV
+# Create and map LDEV to Host Group
 ####################################################################
 - name: Logical Device Module
   hosts: localhost
@@ -29,6 +29,18 @@
     - name: Create Ldev
       hv_ldev:
         connection_info:
+          connection_type: "{{ connection_type }}"
           address: "{{ uai_gateway_address }}"
-          username: "{{ vault_gateway_username }}"
-          password: "{{ vault_gateway_secret }}"
+          api_token: "{{ gateway_token }}"
+        storage_system_info:
+          serial: "{{ storage_serial }}"
+        spec:
+          pool_id: "{{ ldev_pool_id_1 }}"
+          size: "{{ ldev_size_1 }}"
+          name: "{{ ldev_name_1 }}"
+      register: result
+    - debug:
+        var: result
+    - name: Set LDEV ID
+      set_fact:
+        created_ldev_id: "{{ result.data.ldev_id }}"
