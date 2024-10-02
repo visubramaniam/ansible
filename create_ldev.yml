@@ -97,7 +97,7 @@
           secondary_pool_id: "{{ hur_secondary_pool_id_1 }}"
           allocate_new_consistency_group: "{{ hur_allocate_new_consistency_group_1 }}"
           secondary_storage_serial_number: "{{ storage_serial_2 }}"
-          secondary_hostgroup:  "{{ hostgroup_name_2 }}"
+          secondary_hostgroup:  "{{ hur_secondary_hostgroup_1 }}"
       register: result
     - debug:
         var: result

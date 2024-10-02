@@ -43,3 +43,6 @@ hur_primary_volume_journal_id_1: 10
 hur_secondary_volume_journal_id_1: 10
 hur_secondary_pool_id_1: 0
 hur_allocate_new_consistency_group_1: true
+hur_secondary_hostgroup_1:
+    name: ntrs_demo_dc2_1002
+    port: CL7-A
