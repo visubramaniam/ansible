@@ -36,3 +36,10 @@ hostgroup_host_mode_options_2 : [ 54, 63 ]
 hostgroup_wwns_2 :
   - 2876543210ABCDE0
   - 2876543210ABCDE1
+#####################################################################
+# Task 2 : Create HUR PAIR
+######################################################################
+hur_primary_volume_journal_id_1: 10
+hur_secondary_volume_journal_id_1: 10
+hur_secondary_pool_id_1: 0
+hur_allocate_new_consistency_group_1: true
