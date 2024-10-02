@@ -50,8 +50,7 @@
         connection_info:
           connection_type: "{{ connection_type }}"
           address: "{{ uai_gateway_address }}"
-          api_token: "{{ result_token.api_token.token }}"
-          subscriber_id: "{{ subscriber_id }}"
+          api_token: "{{ gateway_token }}"
         storage_system_info:
           serial: "{{ storage_serial }}"
         state: "{{ state_present }}"
@@ -63,6 +62,5 @@
           ldevs:  [ "{{ created_ldev_id }}" ]
           wwns: "{{ hostgroup_wwns_1 }}"
       register: result
-
     - debug:
         var: result
