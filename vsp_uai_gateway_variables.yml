@@ -20,7 +20,7 @@ ldev_name_1 : ntrs_demo_dc1
 # Task 2 : Create hostgroup
 ######################################################################
 hostgroup_name_1 : ntrs_demo_dc1_1002
-hostgroup_port_1 : CL1-C
+hostgroup_port_1 : CL7-C
 hostgroup_host_mode_1 : VMWARE_EXTENSION
 hostgroup_host_mode_options_1 : [ 54, 63 ]
 hostgroup_wwns_1 :
