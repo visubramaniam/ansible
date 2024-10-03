@@ -2,7 +2,7 @@
 
   vars:
 
-    ansible_doc: /home/admin/.local/bin/ansible-doc
+    ansible_doc: /usr/bin/ansible-doc
     modules_all: "{{ (out.stdout|from_yaml).keys()|list }}"
     modules_str: |
       {% for i in modules_all %}
