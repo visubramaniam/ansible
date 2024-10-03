@@ -1,3 +1,7 @@
 - name: Check version of hitachivantara.vspone_block
+  hosts: localhost
+  gather_facts: false
+  collections:
+    - hitachivantara.vspone_block.vsp
   ansible.builtin.debug:
     msg: “hitachivantara.vspone_block {{ lookup(‘hitachivantara.vspone_block’, ‘hitachivantara’) }}"
