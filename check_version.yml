@@ -4,7 +4,8 @@
   collections:
     - hitachivantara.vspone_block.vsp
   tasks:
-    - name: Check version
-      hv_lun:
-    - debug:
-        msg: “hitachivantara.vspone_block {{ lookup(‘hitachivantara.vspone_block’, ‘hitachivantara’) }}"
+    - name: "Set My Pool to use"
+      set_fact:
+        version_hitachi: "{{ lookup('hitachivantara.vspone_block', 'hitachivantara') }}"
+    - debug: var=version_hitachi
+
