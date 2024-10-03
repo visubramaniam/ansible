@@ -6,6 +6,6 @@
   tasks:
     - name: "Check version"
       set_fact:
-        version_hitachi: "{{ lookup('hitachivantara.vspone_block.vsp', 'hitachivantara') }}"
+        version_hitachi: "{{ lookup('hv_lun', 'hitachivantara.vspone_block.vsp') }}"
     - debug: var=version_hitachi
 
