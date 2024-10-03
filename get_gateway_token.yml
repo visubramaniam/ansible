@@ -28,3 +28,19 @@
     - name: Set gateway token
       set_fact:
         gateway_token: "{{ result_token.api_token.token }}"
+    - name: Create Ldev
+      hv_ldev:
+        connection_info:
+          connection_type: "{{ connection_type }}"
+          address: "{{ uai_gateway_address }}"
+          api_token: "{{ gateway_token }}"
+        storage_system_info:
+          serial: "{{ storage_serial }}"
+        state: "{{ state_present }}"
+        spec:
+          pool_id: "{{ ldev_pool_id_1 }}"
+          size: "{{ ldev_size_1 }}"
+          name: "{{ ldev_name_1 }}"
+      register: result
+    - debug:
+        var: result
