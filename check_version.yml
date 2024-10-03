@@ -3,5 +3,5 @@
   gather_facts: false
   collections:
     - hitachivantara.vspone_block.vsp
-  ansible.builtin.debug:
+  debug:
     msg: “hitachivantara.vspone_block {{ lookup(‘hitachivantara.vspone_block’, ‘hitachivantara’) }}"
