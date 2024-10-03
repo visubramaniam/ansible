@@ -4,6 +4,6 @@
   collections:
     - hitachivantara.vspone_block.vsp
   tasks:
-    -name: Check version
-      debug:
+    - name: Check version
+    - debug:
         msg: “hitachivantara.vspone_block {{ lookup(‘hitachivantara.vspone_block’, ‘hitachivantara’) }}"
