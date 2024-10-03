@@ -6,6 +6,6 @@
   tasks:
     - name: "Set My Pool to use"
       set_fact:
-        version_hitachi: "{{ lookup('hv_ldev', 'hitachivantara') }}"
+        version_hitachi: "{{ lookup('vspone_block', 'hitachivantara') }}"
     - debug: var=version_hitachi
 
