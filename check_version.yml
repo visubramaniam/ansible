@@ -1,0 +1,3 @@
+- name: Check version of hitachivantara.vspone_block
+  ansible.builtin.debug:
+    msg: “hitachivantara.vspone_block {{ lookup(‘hitachivantara.vspone_block’, ‘hitachivantara’) }}"
