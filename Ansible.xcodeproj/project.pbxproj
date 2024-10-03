@@ -8,6 +8,7 @@
 
 /* Begin PBXFileReference section */
 		BFED9D332CAECD4D00545730 /* check_version.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = check_version.yml; sourceTree = "<group>"; };
+		BFED9D342CAED38600545730 /* check_all_version.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = check_all_version.yml; sourceTree = "<group>"; };
 		BFFA03282CAB22FE000CFA6B /* ansible_vault_gateway_var.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = ansible_vault_gateway_var.yml; sourceTree = "<group>"; };
 		BFFA03292CAB2524000CFA6B /* ansible_vault_storage_var.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = ansible_vault_storage_var.yml; sourceTree = "<group>"; };
 		BFFA032A2CAB259F000CFA6B /* create_ldev.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = create_ldev.yml; sourceTree = "<group>"; };
@@ -22,6 +23,7 @@
 			isa = PBXGroup;
 			children = (
 				BFED9D332CAECD4D00545730 /* check_version.yml */,
+				BFED9D342CAED38600545730 /* check_all_version.yml */,
 				BFFA032E2CAC23D5000CFA6B /* requirements.yml */,
 				BFFA03282CAB22FE000CFA6B /* ansible_vault_gateway_var.yml */,
 				BFFA03292CAB2524000CFA6B /* ansible_vault_storage_var.yml */,
