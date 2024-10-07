@@ -4,6 +4,6 @@
 storage_serial: 613496    # Example: 810018
 storage_address: 192.168.182.55     # Example: storage1.company.com or sds1.company.com or 10.10.10.10
 vault_storage_username: "ansible_uai"
-vault_storage_secret: "password"
+vault_storage_secret: "St0r@g3@DP!"
 storage_serial_2: 613529
 storage_address_2: 192.168.183.55
