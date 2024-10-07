@@ -3,6 +3,6 @@
 
 uai_gateway_address: 192.168.183.122    # Example: uai_gateway1.company.com or 10.10.10.10
 vault_gateway_username: "admin"           # Gateway user name is admin
-vault_gateway_secret: "St0r@g3@DP!"             # Default password for admin is "overrunsurveysroutewarnssent"
+vault_gateway_secret: "hitachi"             # Default password for admin is "overrunsurveysroutewarnssent"
   #subscriber_id: "30770"               # Example: 12345
 connection_type: "gateway"
