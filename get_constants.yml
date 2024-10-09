@@ -7,29 +7,31 @@
     - ansible_vault_gateway_var.yml
     - ansible_vault_storage_var.yml
     - vsp_uai_gateway_variables.yml
-  vars:
-    - uai_gateway_address: "{{ gtwy_addr  }}"
-    - vault_gateway_username: "{{ gtwy_user }}"
-    - vault_gateway_secret: "{{ gtwy_pass }}"
-    - connection_type: "gateway"
-    - storage_serial: "{{ pvol_serial }}"
-    - storage_address: "{{ pvol_ip }}"
-    - vault_storage_username: "{{ storage_user }}"
-    - vault_storage_secret: "{{ storage_pass }}"
-    - storage_serial_2: "{{ svol_serial }}"
-    - storage_address_2: "{{ svol_ip }}"
-    - state_present: "present"
   tasks:
-    - debug:
+    - name: 
+        set_stats:
+           data:
+             uai_gateway_address: "{{gtwy_addr}}"
+             vault_gateway_username: "{{gtwy_user}}"
+             vault_gateway_secret: "{{gtwy_pass}}"
+             connection_type: "gateway"
+             storage_serial: "{{pvol_serial}}"
+             storage_address: "{{pvol_ip}}"
+             vault_storage_username: "{{storage_user}}"
+             vault_storage_secret: "{{storage_pass}}"
+             storage_serial_2: "{{svol_serial}}"
+             storage_address_2: "{{svol_ip}}"
+             state_present: "present"
+     - debug:
         msg:
-         var01: "{{ uai_gateway_address }}"
-         var02: "{{ vault_gateway_username }}"
-         var03: "{{ vault_gateway_secret }}"
-         var04: "{{ connection_type }}"
-         var05: "{{ storage_serial }}"
-         var06: "{{ storage_address }}"
-         var07: "{{ vault_storage_username }}"
-         var08: "{{ vault_storage_secret }}"
-         var09: "{{ storage_serial_2 }}"
-         var10: "{{ storage_address_2 }}"
-         var11: "{{ state_present }}"
+         var01: uai_gateway_address
+         var02: vault_gateway_username
+         var03: vault_gateway_secret
+         var04: connection_type
+         var05: storage_serial
+         var06: storage_address
+         var07: vault_storage_username
+         var08: vault_storage_secret
+         var09: storage_serial_2
+         var10: storage_address_2
+         var11: state_present
