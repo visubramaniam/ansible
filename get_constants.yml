@@ -4,27 +4,17 @@
   collections:
     - hitachivantara.vspone_block.vsp
   vars:
-    - v1: "{{gtwy_addr}}"
-    - v2: "{{gtwy_user}}"
-    - v3: "{{gtwy_pass}}"
-    - v4: "gateway"
-    - v5: "{{pvol_serial}}"
-    - v6: "{{pvol_ip}}"
-    - v7: "{{storage_user}}"
-    - v8: "{{storage_pass}}"
-    - v9: "{{svol_serial}}"
-    - v10: "{{svol_ip}}"
-    - v11: "present"
+    - data:
+       v1: "{{gtwy_addr}}"
+       v2: "{{gtwy_user}}"
+       v3: "{{gtwy_pass}}"
+       v4: "gateway"
+       v5: "{{pvol_serial}}"
+       v6: "{{pvol_ip}}"
+       v7: "{{storage_user}}"
+       v8: "{{storage_pass}}"
+       v9: "{{svol_serial}}"
+       v10: "{{svol_ip}}"
+       v11: "present"
   tasks:
-    - debug:  msg:
-               uai_gateway_address : "{{ v1 }}"
-               vault_gateway_username: "{{ v2 }}"
-               vault_gateway_secret: "{{ v3 }}"
-               connection_type: "{{ v4 }}"
-               storage_serial: "{{ v5 }}"
-               storage_address: "{{ v6 }}"
-               vault_storage_username: "{{ v7 }}"
-               vault_storage_secret: "{{ v8 }}"
-               storage_serial_2: "{{ v9 }}"
-               storage_address_2: "{{ v10 }"
-               state_present: "{{ v11 }}"
+    - debug:  var:data
