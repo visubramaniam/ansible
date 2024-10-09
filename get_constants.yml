@@ -18,7 +18,7 @@
   tasks:
     - debug:
         msg:
-          m1: uai_gateway_address
-          m2: vault_gateway_username
-          m3: connection_type
+          m1: {{ uai_gateway_address }}
+          m2: {{ vault_gateway_username }}
+          m3: {{ connection_type }}
      
