@@ -17,4 +17,4 @@
        v10: "{{svol_ip}}"
        v11: "present"
   tasks:
-    - debug:  var:data
+    - debug:  var=data
