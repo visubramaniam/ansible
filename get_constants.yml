@@ -28,5 +28,5 @@
                vault_storage_username: "{{ v7 }}"
                vault_storage_secret: "{{ v8 }}"
                storage_serial_2: "{{ v9 }}"
-               storage_address_2: "{{ v10 }"
+               storage_address_2: "{{ v10 }}"
                state_present: "{{ v11 }}"
