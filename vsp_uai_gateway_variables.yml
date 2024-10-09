@@ -12,7 +12,6 @@ state_restore : restore
 ####################################################################
 # Task 1 : Create ldev
 ####################################################################
-ldev_ldev_id_1 : 4102
 ldev_pool_id_1 : 0
 ldev_size_1 : 10GB
 ldev_name_1 : ntrs_demo_dc1
@@ -39,8 +38,8 @@ hostgroup_wwns_2 :
 #####################################################################
 # Task 2 : Create HUR PAIR
 ######################################################################
-hur_primary_volume_journal_id_1: 12
-hur_secondary_volume_journal_id_1: 12
+hur_primary_volume_journal_id_1: 13
+hur_secondary_volume_journal_id_1: 13
 hur_secondary_pool_id_1: 0
 hur_allocate_new_consistency_group_1: true
 hur_secondary_hostgroup_1:
