@@ -1,5 +1,5 @@
 ####################################################################
-# Create and map LDEV to Host Group
+# Create LDEV
 ####################################################################
 - name: Logical Device Module
   hosts: localhost
@@ -13,19 +13,6 @@
     - vsp_uai_gateway_variables.yml
 
   tasks:
-    - name: Get UAI gateway token
-      hv_uaig_token_fact:
-        connection_info:
-          address: "{{ uai_gateway_address }}"
-          username: "{{ vault_gateway_username }}"
-          password: "{{ vault_gateway_secret }}"
-      register: result_token
-      ignore_errors: False
-    - debug:
-        var: result_token
-    - name: Set gateway token
-      set_fact:
-        gateway_token: "{{ result_token.api_token.token }}"
     - name: Create Ldev
       hv_ldev:
         connection_info:
@@ -45,59 +32,3 @@
     - name: Set LDEV ID
       set_fact:
         created_ldev_id: "{{ result.data.ldev_id }}"
-    - name: Create hostgroup
-      hv_hg:
-        connection_info:
-          connection_type: "{{ connection_type }}"
-          address: "{{ uai_gateway_address }}"
-          api_token: "{{ gateway_token }}"
-        storage_system_info:
-          serial: "{{ storage_serial }}"
-        state: "{{ state_present }}"
-        spec:
-          name: "{{ hostgroup_name_1 }}"
-          port: "{{ hostgroup_port_1 }}"
-          host_mode: "{{ hostgroup_host_mode_1 }}"
-          host_mode_options: "{{ hostgroup_host_mode_options_1 }}"
-          ldevs:  [ "{{ created_ldev_id }}" ]
-          wwns: "{{ hostgroup_wwns_1 }}"
-      register: result
-    - debug:
-        var: result
-    - name: Create remote hostgroup
-      hv_hg:
-        connection_info:
-          connection_type: "{{ connection_type }}"
-          address: "{{ uai_gateway_address }}"
-          api_token: "{{ gateway_token }}"
-        storage_system_info:
-          serial: "{{ storage_serial_2 }}"
-        state: "{{ state_present }}"
-        spec:
-          name: "{{ hostgroup_name_2 }}"
-          port: "{{ hostgroup_port_2 }}"
-          host_mode: "{{ hostgroup_host_mode_2 }}"
-          host_mode_options: "{{ hostgroup_host_mode_options_2 }}"
-          wwns: "{{ hostgroup_wwns_2 }}"
-      register: result
-    - debug:
-        var: result
-    - name: Create HUR pair
-      hv_hur:
-        storage_system_info:
-          serial: '{{ storage_serial }}'
-        connection_info:
-          connection_type: "{{ connection_type }}"
-          address: "{{ uai_gateway_address }}"
-          api_token: "{{ result_token.api_token.token }}"
-        spec:
-          primary_volume_id: "{{ created_ldev_id }}"
-          primary_volume_journal_id: "{{ hur_primary_volume_journal_id_1 }}"
-          secondary_volume_journal_id: "{{ hur_secondary_volume_journal_id_1 }}"
-          secondary_pool_id: "{{ hur_secondary_pool_id_1 }}"
-          allocate_new_consistency_group: "{{ hur_allocate_new_consistency_group_1 }}"
-          secondary_storage_serial_number: "{{ storage_serial_2 }}"
-          secondary_hostgroup:  "{{ hur_secondary_hostgroup_1 }}"
-      register: result
-    - debug:
-        var: result
