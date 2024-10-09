@@ -24,7 +24,8 @@
       register: result_token
       ignore_errors: False
     - name: Set gateway token
-      set_fact:
-        gateway_token: "{{ result_token.api_token.token }}"
+      set_stats:
+        data:
+           gateway_token: "{{ result_token.api_token.token }}"
     - debug:
         var: gateway_token
