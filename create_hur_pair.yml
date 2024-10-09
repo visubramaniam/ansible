@@ -18,7 +18,7 @@
         connection_info:
           connection_type: "{{ connection_type }}"
           address: "{{ uai_gateway_address }}"
-          api_token: "{{ result_token.api_token.token }}"
+          api_token: "{{ gateway_token }}"
         spec:
           primary_volume_id: "{{ created_ldev_id }}"
           primary_volume_journal_id: "{{ hur_primary_volume_journal_id_1 }}"
