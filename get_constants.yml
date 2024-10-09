@@ -10,7 +10,7 @@
   tasks:
     - set_stats:
          data:
-           uai_gateway_address: "{{ gtwy_addr}}"
+           uai_gateway_address: "{{ gtwy_addr }}"
            vault_gateway_username: "{{ gtwy_user }}"
            vault_gateway_secret: "{{ gtwy_pass }}"
            connection_type: "gateway"
