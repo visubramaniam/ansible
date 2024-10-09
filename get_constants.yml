@@ -22,6 +22,7 @@
            storage_address_2: svol_ip
            state_present: "present"
     - debug:
+        msg:
          var01: uai_gateway_address
          var02: vault_gateway_username
          var03: vault_gateway_secret
