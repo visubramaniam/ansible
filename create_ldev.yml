@@ -30,5 +30,5 @@
     - name: Set LDEV ID
       set_fact:
         created_ldev_id: "{{ result.data.ldev_id }}"
-    - debug:
-        var created_ldev_id
+    - debug: var=created_ldev_id
+        
