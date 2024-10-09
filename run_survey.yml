@@ -1,0 +1,16 @@
+- name: Gateway Token  Module
+  hosts: localhost
+  gather_facts: false
+  collections:
+    - hitachivantara.vspone_block.vsp
+  vars_files:
+    - ansible_vault_gateway_var.yml
+    - ansible_vault_storage_var.yml
+    - vsp_uai_gateway_variables.yml
+  tasks:
+    - set_stats:
+         data:
+           uai_gateway_address: 192.168.183.122
+           vault_gateway_username: "admin"
+           vault_gateway_secret: "hitachi"
+           connection_type: "gateway"

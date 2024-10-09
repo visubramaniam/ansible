@@ -1,7 +1,7 @@
 ####################################################################
 # Create HUR PAIR
 ####################################################################
-- name: Logical Device Module
+- name: Create HUR PAIR Module
   hosts: localhost
   gather_facts: false
   collections:

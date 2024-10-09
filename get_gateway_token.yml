@@ -1,7 +1,7 @@
 ####################################################################
 # Get Gateway Token
 ####################################################################
-- name: Logical Device Module
+- name: Gateway Token  Module
   hosts: localhost
   gather_facts: false
   collections:
@@ -12,9 +12,6 @@
     - ansible_vault_storage_var.yml
     - vsp_uai_gateway_variables.yml
   tasks:
-####################################################################
-# Task 0 : Get UAI gateway token
-####################################################################
     - name: Get UAI gateway token
       hv_uaig_token_fact:
         connection_info:

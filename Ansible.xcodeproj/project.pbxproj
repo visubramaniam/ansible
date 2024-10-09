@@ -10,6 +10,7 @@
 		BFED9D362CB712A600545730 /* create_pvol_hostgroup.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = create_pvol_hostgroup.yml; sourceTree = "<group>"; };
 		BFED9D372CB712F300545730 /* create_svol_hostgroup.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = create_svol_hostgroup.yml; sourceTree = "<group>"; };
 		BFED9D392CB7138E00545730 /* create_hur_pair.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = create_hur_pair.yml; sourceTree = "<group>"; };
+		BFED9D3A2CB723DB00545730 /* run_survey.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = run_survey.yml; sourceTree = "<group>"; };
 		BFFA03282CAB22FE000CFA6B /* ansible_vault_gateway_var.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = ansible_vault_gateway_var.yml; sourceTree = "<group>"; };
 		BFFA03292CAB2524000CFA6B /* ansible_vault_storage_var.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = ansible_vault_storage_var.yml; sourceTree = "<group>"; };
 		BFFA032A2CAB259F000CFA6B /* create_ldev.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = create_ldev.yml; sourceTree = "<group>"; };
@@ -28,6 +29,7 @@
 				BFFA03292CAB2524000CFA6B /* ansible_vault_storage_var.yml */,
 				BFFA032A2CAB259F000CFA6B /* create_ldev.yml */,
 				BFED9D362CB712A600545730 /* create_pvol_hostgroup.yml */,
+				BFED9D3A2CB723DB00545730 /* run_survey.yml */,
 				BFED9D372CB712F300545730 /* create_svol_hostgroup.yml */,
 				BFED9D392CB7138E00545730 /* create_hur_pair.yml */,
 				BFFA032D2CAB7700000CFA6B /* vsp_uai_gateway_variables.yml */,

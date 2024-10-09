@@ -1,7 +1,7 @@
 ####################################################################
 # Create PVOL Host Group
 ####################################################################
-- name: Logical Device Module
+- name: Hostgroup Module
   hosts: localhost
   gather_facts: false
   collections:

@@ -1,7 +1,7 @@
 ####################################################################
 # Create SVOL Host Group
 ####################################################################
-- name: Logical Device Module
+- name: Host group Module
   hosts: localhost
   gather_facts: false
   collections:
