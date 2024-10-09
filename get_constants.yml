@@ -22,16 +22,3 @@
              storage_serial_2: "{{svol_serial}}"
              storage_address_2: "{{svol_ip}}"
              state_present: "present"
-     - debug:
-        msg:
-         var01: uai_gateway_address
-         var02: vault_gateway_username
-         var03: vault_gateway_secret
-         var04: connection_type
-         var05: storage_serial
-         var06: storage_address
-         var07: vault_storage_username
-         var08: vault_storage_secret
-         var09: storage_serial_2
-         var10: storage_address_2
-         var11: state_present
