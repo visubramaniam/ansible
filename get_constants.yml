@@ -3,22 +3,15 @@
   gather_facts: false
   collections:
     - hitachivantara.vspone_block.vsp
-  vars_files:
-    - ansible_vault_gateway_var.yml
-    - ansible_vault_storage_var.yml
-    - vsp_uai_gateway_variables.yml
-  tasks:
-    - name: 
-        set_stats:
-           data:
-             uai_gateway_address: "{{gtwy_addr}}"
-             vault_gateway_username: "{{gtwy_user}}"
-             vault_gateway_secret: "{{gtwy_pass}}"
-             connection_type: "gateway"
-             storage_serial: "{{pvol_serial}}"
-             storage_address: "{{pvol_ip}}"
-             vault_storage_username: "{{storage_user}}"
-             vault_storage_secret: "{{storage_pass}}"
-             storage_serial_2: "{{svol_serial}}"
-             storage_address_2: "{{svol_ip}}"
-             state_present: "present"
+  vars:
+    - uai_gateway_address: "{{gtwy_addr}}"
+    - vault_gateway_username: "{{gtwy_user}}"
+    - vault_gateway_secret: "{{gtwy_pass}}"
+    - connection_type: "gateway"
+    - storage_serial: "{{pvol_serial}}"
+    - storage_address: "{{pvol_ip}}"
+    - vault_storage_username: "{{storage_user}}"
+    - vault_storage_secret: "{{storage_pass}}"
+    - storage_serial_2: "{{svol_serial}}"
+    - storage_address_2: "{{svol_ip}}"
+    - state_present: "present"
