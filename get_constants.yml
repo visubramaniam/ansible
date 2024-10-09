@@ -1,4 +1,4 @@
-- name: Gateway Token  Module
+- name: Get Constants
   hosts: localhost
   gather_facts: false
   collections:
