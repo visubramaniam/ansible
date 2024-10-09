@@ -28,7 +28,8 @@
           name: "{{ ldev_name_1 }}"
       register: result
     - name: Set LDEV ID
-      set_fact:
-        created_ldev_id: "{{ result.data.ldev_id }}"
+      set_stats:
+        data:
+           created_ldev_id: "{{ result.data.ldev_id }}"
     - debug: var=created_ldev_id
         
