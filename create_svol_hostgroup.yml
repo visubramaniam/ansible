@@ -1,0 +1,32 @@
+####################################################################
+# Create SVOL Host Group
+####################################################################
+- name: Logical Device Module
+  hosts: localhost
+  gather_facts: false
+  collections:
+    - hitachivantara.vspone_block.vsp
+
+  vars_files:
+    - ansible_vault_gateway_var.yml
+    - ansible_vault_storage_var.yml
+    - vsp_uai_gateway_variables.yml
+  tasks:
+    - name: Create remote hostgroup
+      hv_hg:
+        connection_info:
+          connection_type: "{{ connection_type }}"
+          address: "{{ uai_gateway_address }}"
+          api_token: "{{ gateway_token }}"
+        storage_system_info:
+          serial: "{{ storage_serial_2 }}"
+        state: "{{ state_present }}"
+        spec:
+          name: "{{ hostgroup_name_2 }}"
+          port: "{{ hostgroup_port_2 }}"
+          host_mode: "{{ hostgroup_host_mode_2 }}"
+          host_mode_options: "{{ hostgroup_host_mode_options_2 }}"
+          wwns: "{{ hostgroup_wwns_2 }}"
+      register: result
+    - debug:
+        var: result
