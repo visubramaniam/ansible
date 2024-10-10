@@ -67,7 +67,7 @@
 					};
 				};
 			};
-			buildConfigurationList = BFFA03212CAB22AD000CFA6B /* Build configuration list for PBXProject "Ansible" */;
+			buildConfigurationList = BFFA03212CAB22AD000CFA6B /* Build configuration list for PBXProject "HUR_DEMO" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -225,7 +225,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		BFFA03212CAB22AD000CFA6B /* Build configuration list for PBXProject "Ansible" */ = {
+		BFFA03212CAB22AD000CFA6B /* Build configuration list for PBXProject "HUR_DEMO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BFFA03232CAB22AD000CFA6B /* Debug */,
