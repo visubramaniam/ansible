@@ -6,11 +6,12 @@
   gather_facts: false
   collections:
     - hitachivantara.vspone_block.vsp
-
-  vars_files:
-    - ansible_vault_gateway_var.yml
-    - ansible_vault_storage_var.yml
-    - vsp_uai_gateway_variables.yml
+  vars:
+    - hostgroup_name_1: "{{name_1}}"
+    - hostgroup_port_1: "{{port_1}}"
+    - hostgroup_host_mode_1: "{{host_mode_1}}"
+    - hostgroup_host_mode_options_1: "{{host_mode_options_1}}"
+    - wwns: "{{hostgroup_wwns_1}}"
   tasks:
     - name: Create hostgroup
       hv_hg:
