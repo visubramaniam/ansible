@@ -6,10 +6,7 @@
   gather_facts: false
   collections:
     - hitachivantara.vspone_block.vsp
-
   vars_files:
-    - ansible_vault_gateway_var.yml
-    - ansible_vault_storage_var.yml
     - vsp_uai_gateway_variables.yml
   tasks:
     - name: Create remote hostgroup

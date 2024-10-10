@@ -6,10 +6,8 @@
   gather_facts: false
   collections:
     - hitachivantara.vspone_block.vsp
-  vars:
-    - ldev_pool_id_1: "{{pool_id}}"
-    - ldev_size_1: "{{size_1}}"
-    - ldev_name_1: "{{name_1}}"
+  vars_files:
+    - vsp_uai_gateway_variables.yml
   tasks:
     - name: Create Ldev
       hv_ldev:

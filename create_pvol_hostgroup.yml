@@ -6,12 +6,8 @@
   gather_facts: false
   collections:
     - hitachivantara.vspone_block.vsp
-  vars:
-    - hostgroup_name_1: "{{name_1}}"
-    - hostgroup_port_1: "{{port_1}}"
-    - hostgroup_host_mode_1: "{{host_mode_1}}"
-    - hostgroup_host_mode_options_1: "{{host_mode_options_1}}"
-    - wwns: "{{hostgroup_wwns_1}}"
+  vars_files:
+    - vsp_uai_gateway_variables.yml
   tasks:
     - name: Create hostgroup
       hv_hg:
