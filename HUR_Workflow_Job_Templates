@@ -1,0 +1,550 @@
+{
+     "workflow_job_templates": [
+          {
+               "name": "Create HUR PAIR between two VSP E1090 arrays",
+               "description": "",
+               "extra_vars": "---",
+               "survey_enabled": false,
+               "allow_simultaneous": false,
+               "ask_variables_on_launch": false,
+               "limit": null,
+               "scm_branch": null,
+               "ask_inventory_on_launch": false,
+               "ask_scm_branch_on_launch": false,
+               "ask_limit_on_launch": false,
+               "webhook_service": "",
+               "webhook_credential": null,
+               "ask_labels_on_launch": false,
+               "ask_skip_tags_on_launch": false,
+               "ask_tags_on_launch": false,
+               "skip_tags": null,
+               "job_tags": null,
+               "organization": {
+                    "name": "Default",
+                    "type": "organization"
+               },
+               "inventory": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Demo Inventory",
+                    "type": "inventory"
+               },
+               "related": {
+                    "schedules": [],
+                    "workflow_nodes": [
+                         {
+                              "extra_data": {},
+                              "inventory": null,
+                              "scm_branch": null,
+                              "job_type": null,
+                              "job_tags": null,
+                              "skip_tags": null,
+                              "limit": null,
+                              "diff_mode": null,
+                              "verbosity": null,
+                              "execution_environment": null,
+                              "forks": null,
+                              "job_slice_count": null,
+                              "timeout": null,
+                              "all_parents_must_converge": false,
+                              "identifier": "Create PVOL",
+                              "workflow_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Create HUR PAIR between two VSP E1090 arrays",
+                                   "type": "workflow_job_template"
+                              },
+                              "unified_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Create HUR P-VOL LUN",
+                                   "type": "job_template"
+                              },
+                              "related": {
+                                   "credentials": [],
+                                   "success_nodes": [
+                                        {
+                                             "workflow_job_template": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Create HUR PAIR between two VSP E1090 arrays",
+                                                  "type": "workflow_job_template"
+                                             },
+                                             "identifier": "8d26691d-ff46-4fbc-91b5-3d5403ca5108",
+                                             "type": "workflow_job_template_node"
+                                        }
+                                   ],
+                                   "failure_nodes": [],
+                                   "always_nodes": []
+                              },
+                              "natural_key": {
+                                   "workflow_job_template": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Create HUR PAIR between two VSP E1090 arrays",
+                                        "type": "workflow_job_template"
+                                   },
+                                   "identifier": "Create PVOL",
+                                   "type": "workflow_job_template_node"
+                              }
+                         },
+                         {
+                              "extra_data": {},
+                              "inventory": null,
+                              "scm_branch": null,
+                              "job_type": null,
+                              "job_tags": null,
+                              "skip_tags": null,
+                              "limit": null,
+                              "diff_mode": null,
+                              "verbosity": null,
+                              "execution_environment": null,
+                              "forks": null,
+                              "job_slice_count": null,
+                              "timeout": null,
+                              "all_parents_must_converge": false,
+                              "identifier": "Get API Token",
+                              "workflow_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Create HUR PAIR between two VSP E1090 arrays",
+                                   "type": "workflow_job_template"
+                              },
+                              "unified_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Get Token from Hitachi Ansible Gateway",
+                                   "type": "job_template"
+                              },
+                              "related": {
+                                   "credentials": [],
+                                   "success_nodes": [
+                                        {
+                                             "workflow_job_template": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Create HUR PAIR between two VSP E1090 arrays",
+                                                  "type": "workflow_job_template"
+                                             },
+                                             "identifier": "Create PVOL",
+                                             "type": "workflow_job_template_node"
+                                        }
+                                   ],
+                                   "failure_nodes": [],
+                                   "always_nodes": []
+                              },
+                              "natural_key": {
+                                   "workflow_job_template": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Create HUR PAIR between two VSP E1090 arrays",
+                                        "type": "workflow_job_template"
+                                   },
+                                   "identifier": "Get API Token",
+                                   "type": "workflow_job_template_node"
+                              }
+                         },
+                         {
+                              "extra_data": {},
+                              "inventory": null,
+                              "scm_branch": null,
+                              "job_type": null,
+                              "job_tags": null,
+                              "skip_tags": null,
+                              "limit": null,
+                              "diff_mode": null,
+                              "verbosity": null,
+                              "execution_environment": null,
+                              "forks": null,
+                              "job_slice_count": null,
+                              "timeout": null,
+                              "all_parents_must_converge": false,
+                              "identifier": "8d26691d-ff46-4fbc-91b5-3d5403ca5108",
+                              "workflow_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Create HUR PAIR between two VSP E1090 arrays",
+                                   "type": "workflow_job_template"
+                              },
+                              "unified_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Create PVOL Hostgroup",
+                                   "type": "job_template"
+                              },
+                              "related": {
+                                   "credentials": [],
+                                   "success_nodes": [
+                                        {
+                                             "workflow_job_template": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Create HUR PAIR between two VSP E1090 arrays",
+                                                  "type": "workflow_job_template"
+                                             },
+                                             "identifier": "fc734835-0749-4e13-8c25-2441cb1440a5",
+                                             "type": "workflow_job_template_node"
+                                        }
+                                   ],
+                                   "failure_nodes": [],
+                                   "always_nodes": []
+                              },
+                              "natural_key": {
+                                   "workflow_job_template": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Create HUR PAIR between two VSP E1090 arrays",
+                                        "type": "workflow_job_template"
+                                   },
+                                   "identifier": "8d26691d-ff46-4fbc-91b5-3d5403ca5108",
+                                   "type": "workflow_job_template_node"
+                              }
+                         },
+                         {
+                              "extra_data": {},
+                              "inventory": null,
+                              "scm_branch": null,
+                              "job_type": null,
+                              "job_tags": null,
+                              "skip_tags": null,
+                              "limit": null,
+                              "diff_mode": null,
+                              "verbosity": null,
+                              "execution_environment": null,
+                              "forks": null,
+                              "job_slice_count": null,
+                              "timeout": null,
+                              "all_parents_must_converge": false,
+                              "identifier": "fc734835-0749-4e13-8c25-2441cb1440a5",
+                              "workflow_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Create HUR PAIR between two VSP E1090 arrays",
+                                   "type": "workflow_job_template"
+                              },
+                              "unified_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Create SVOL Hostgroup",
+                                   "type": "job_template"
+                              },
+                              "related": {
+                                   "credentials": [],
+                                   "success_nodes": [
+                                        {
+                                             "workflow_job_template": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Create HUR PAIR between two VSP E1090 arrays",
+                                                  "type": "workflow_job_template"
+                                             },
+                                             "identifier": "e5ebf507-9f74-4484-8ddb-a71042c49c56",
+                                             "type": "workflow_job_template_node"
+                                        }
+                                   ],
+                                   "failure_nodes": [],
+                                   "always_nodes": []
+                              },
+                              "natural_key": {
+                                   "workflow_job_template": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Create HUR PAIR between two VSP E1090 arrays",
+                                        "type": "workflow_job_template"
+                                   },
+                                   "identifier": "fc734835-0749-4e13-8c25-2441cb1440a5",
+                                   "type": "workflow_job_template_node"
+                              }
+                         },
+                         {
+                              "extra_data": {},
+                              "inventory": null,
+                              "scm_branch": null,
+                              "job_type": null,
+                              "job_tags": null,
+                              "skip_tags": null,
+                              "limit": null,
+                              "diff_mode": null,
+                              "verbosity": null,
+                              "execution_environment": null,
+                              "forks": null,
+                              "job_slice_count": null,
+                              "timeout": null,
+                              "all_parents_must_converge": false,
+                              "identifier": "ab6440fd-a153-41ce-bfeb-cba3a08aea5f",
+                              "workflow_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Create HUR PAIR between two VSP E1090 arrays",
+                                   "type": "workflow_job_template"
+                              },
+                              "unified_job_template": {
+                                   "name": "Cleanup Expired Sessions",
+                                   "type": "system_job_template"
+                              },
+                              "related": {
+                                   "credentials": [],
+                                   "success_nodes": [],
+                                   "failure_nodes": [],
+                                   "always_nodes": []
+                              },
+                              "natural_key": {
+                                   "workflow_job_template": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Create HUR PAIR between two VSP E1090 arrays",
+                                        "type": "workflow_job_template"
+                                   },
+                                   "identifier": "ab6440fd-a153-41ce-bfeb-cba3a08aea5f",
+                                   "type": "workflow_job_template_node"
+                              }
+                         },
+                         {
+                              "extra_data": {},
+                              "inventory": null,
+                              "scm_branch": null,
+                              "job_type": null,
+                              "job_tags": null,
+                              "skip_tags": null,
+                              "limit": null,
+                              "diff_mode": null,
+                              "verbosity": null,
+                              "execution_environment": null,
+                              "forks": null,
+                              "job_slice_count": null,
+                              "timeout": null,
+                              "all_parents_must_converge": false,
+                              "identifier": "e5ebf507-9f74-4484-8ddb-a71042c49c56",
+                              "workflow_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Create HUR PAIR between two VSP E1090 arrays",
+                                   "type": "workflow_job_template"
+                              },
+                              "unified_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Create HUR PAIR",
+                                   "type": "job_template"
+                              },
+                              "related": {
+                                   "credentials": [],
+                                   "success_nodes": [
+                                        {
+                                             "workflow_job_template": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Create HUR PAIR between two VSP E1090 arrays",
+                                                  "type": "workflow_job_template"
+                                             },
+                                             "identifier": "ab6440fd-a153-41ce-bfeb-cba3a08aea5f",
+                                             "type": "workflow_job_template_node"
+                                        }
+                                   ],
+                                   "failure_nodes": [],
+                                   "always_nodes": []
+                              },
+                              "natural_key": {
+                                   "workflow_job_template": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Create HUR PAIR between two VSP E1090 arrays",
+                                        "type": "workflow_job_template"
+                                   },
+                                   "identifier": "e5ebf507-9f74-4484-8ddb-a71042c49c56",
+                                   "type": "workflow_job_template_node"
+                              }
+                         },
+                         {
+                              "extra_data": {},
+                              "inventory": null,
+                              "scm_branch": null,
+                              "job_type": null,
+                              "job_tags": null,
+                              "skip_tags": null,
+                              "limit": null,
+                              "diff_mode": null,
+                              "verbosity": null,
+                              "execution_environment": null,
+                              "forks": null,
+                              "job_slice_count": null,
+                              "timeout": null,
+                              "all_parents_must_converge": false,
+                              "identifier": "9ea1a14a-6424-4cc1-a1db-e75b26a1d65f",
+                              "workflow_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Create HUR PAIR between two VSP E1090 arrays",
+                                   "type": "workflow_job_template"
+                              },
+                              "unified_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Get constants",
+                                   "type": "job_template"
+                              },
+                              "related": {
+                                   "credentials": [],
+                                   "success_nodes": [
+                                        {
+                                             "workflow_job_template": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Create HUR PAIR between two VSP E1090 arrays",
+                                                  "type": "workflow_job_template"
+                                             },
+                                             "identifier": "Get API Token",
+                                             "type": "workflow_job_template_node"
+                                        }
+                                   ],
+                                   "failure_nodes": [],
+                                   "always_nodes": []
+                              },
+                              "natural_key": {
+                                   "workflow_job_template": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Create HUR PAIR between two VSP E1090 arrays",
+                                        "type": "workflow_job_template"
+                                   },
+                                   "identifier": "9ea1a14a-6424-4cc1-a1db-e75b26a1d65f",
+                                   "type": "workflow_job_template_node"
+                              }
+                         },
+                         {
+                              "extra_data": {},
+                              "inventory": null,
+                              "scm_branch": null,
+                              "job_type": null,
+                              "job_tags": null,
+                              "skip_tags": null,
+                              "limit": null,
+                              "diff_mode": null,
+                              "verbosity": null,
+                              "execution_environment": null,
+                              "forks": null,
+                              "job_slice_count": null,
+                              "timeout": null,
+                              "all_parents_must_converge": false,
+                              "identifier": "Sync Github",
+                              "workflow_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "Create HUR PAIR between two VSP E1090 arrays",
+                                   "type": "workflow_job_template"
+                              },
+                              "unified_job_template": {
+                                   "organization": {
+                                        "name": "Default",
+                                        "type": "organization"
+                                   },
+                                   "name": "HUR Demo",
+                                   "type": "project"
+                              },
+                              "related": {
+                                   "credentials": [],
+                                   "success_nodes": [
+                                        {
+                                             "workflow_job_template": {
+                                                  "organization": {
+                                                       "name": "Default",
+                                                       "type": "organization"
+                                                  },
+                                                  "name": "Create HUR PAIR between two VSP E1090 arrays",
+                                                  "type": "workflow_job_template"
+                                             },
+                                             "identifier": "9ea1a14a-6424-4cc1-a1db-e75b26a1d65f",
+                                             "type": "workflow_job_template_node"
+                                        }
+                                   ],
+                                   "failure_nodes": [],
+                                   "always_nodes": []
+                              },
+                              "natural_key": {
+                                   "workflow_job_template": {
+                                        "organization": {
+                                             "name": "Default",
+                                             "type": "organization"
+                                        },
+                                        "name": "Create HUR PAIR between two VSP E1090 arrays",
+                                        "type": "workflow_job_template"
+                                   },
+                                   "identifier": "Sync Github",
+                                   "type": "workflow_job_template_node"
+                              }
+                         }
+                    ],
+                    "labels": [],
+                    "notification_templates_started": [],
+                    "notification_templates_success": [],
+                    "notification_templates_error": [],
+                    "notification_templates_approvals": [],
+                    "survey_spec": {}
+               },
+               "natural_key": {
+                    "organization": {
+                         "name": "Default",
+                         "type": "organization"
+                    },
+                    "name": "Create HUR PAIR between two VSP E1090 arrays",
+                    "type": "workflow_job_template"
+               }
+          }
+     ]
+}
